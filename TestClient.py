@@ -8,7 +8,7 @@ class MessageSender(threading.Thread):
         while True:
             message = input()
             sock.send(message.encode())
-HOST,PORT = "127.0.0.1",5050
+HOST,PORT = "192.168.137.1",5050
 bufferSize = 4096
 with socket.socket(socket.AF_INET,socket.SOCK_STREAM) as sock:
     sock.connect((HOST,PORT))
